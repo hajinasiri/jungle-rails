@@ -44,6 +44,9 @@
             <%= fa_icon "shopping-cart" %> My Cart (<%= cart.size %>)
           <% end %>
         </li>
+        <% if (request.env['PATH_INFO'] != '/users/new') && (!request.env['PATH_INFO'].start_with? '/admin') %>
+          <%= link_to "Sign up now!", "/users/new", class: "btn btn-lg btn-primary" %>
+        <% end %>
       </ul>
     </div>
   </div>
