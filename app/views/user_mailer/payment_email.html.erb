@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Thanks for your payment, <%= @user.first_name %></h1>
+    <p>
+      You have successfully payed for your order,
+       .<br>
+
+    </p>
+    <p>
+      <% @order.line_items.each do |item| %>
+        <%="Product name: #{item.product.name}" =%>
+        <%="Quantity: #{item.quantity}"=%>
+        <%="Item price: #{item.item_price}"=%>
+        <%="Total item price: #{item.total_price}"=%><br>
+      <% end %>
+      <%="Total: #{@order.total_cents/100}"=%>
+    </p>
+  </body>
+</html>
+
+
+

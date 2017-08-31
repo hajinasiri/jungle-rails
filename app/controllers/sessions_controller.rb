@@ -15,5 +15,9 @@ class SessionsController < ApplicationController
   end
 
   def destroy
+    session[:user_id] = nil
+    empty_cart
+    redirect_to '/login'
+
   end
 end

@@ -14,6 +14,7 @@ class CartsController < ApplicationController
     redirect_to :back
   end
 
+
   def remove_item
     product_id = params[:product_id].to_s
 

@@ -20,4 +20,8 @@ class ApplicationController < ActionController::Base
     cookies[:cart]
   end
 
+  def empty_cart
+    update_cart({})
+  end
+
 end

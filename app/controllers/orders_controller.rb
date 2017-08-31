@@ -52,7 +52,13 @@ class OrdersController < ApplicationController
         )
       end
     end
-    order.save!
+
+    if order.save
+      UserMailer.payment_email(current_user, order).deliver_now
+    else
+      # do some stuff
+    end
+
     order
   end
 
