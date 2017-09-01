@@ -1,0 +1,15 @@
+<div class="review">
+<hr>
+  <%= "Rating: #{review.rating}" %>
+  <span>☆</span>
+  <% if(review.user == current_user)%>
+    <%= link_to 'Delete', product_review_path(review.product, review), method: :delete %>
+  <% end %>
+
+
+  <br>
+  <%= "Review: #{review.description}" %>
+
+
+
+</div>

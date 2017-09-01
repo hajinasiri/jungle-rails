@@ -133,4 +133,10 @@ cat3.products.create!({
 })
 
 
+5.times do |i|
+
+  Review.create( product_id: i, user_id:i, description:"desc",rating:4)
+end
+
+
 puts "DONE!"
