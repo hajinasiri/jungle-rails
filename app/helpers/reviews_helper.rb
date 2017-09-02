@@ -1,5 +1,3 @@
 module ReviewsHelper
 
-
-
 end

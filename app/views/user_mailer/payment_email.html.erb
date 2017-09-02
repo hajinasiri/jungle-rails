@@ -5,11 +5,12 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
-    <h1>Thanks for your payment, <%= @user.first_name %></h1>
+    <% if @user.first_name %>
+      <h1>Thanks for your payment, <%= @user.first_name %></h1>
+    <% end %>
     <p>
-      You have successfully paid for your order,
-       .<br>
-
+      You have successfully paid for your order
+       <br>
     </p>
     <p>
       <% @order.line_items.each do |item| %>

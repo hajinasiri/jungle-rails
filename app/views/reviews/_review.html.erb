@@ -1,15 +1,16 @@
 <div class="review">
-<hr>
-  <%= "Rating: #{review.rating}" %>
-  <span>☆</span>
-  <% if(review.user == current_user)%>
-    <%= link_to 'Delete', product_review_path(review.product, review), method: :delete %>
+  <hr>
+  <%  for i in 1..review.rating %>
+    <span class=star>☆</span>
   <% end %>
-
-
+  <%  for i in review.rating..4 %>
+    <span >☆</span>
+  <% end %>
   <br>
-  <%= "Review: #{review.description}" %>
-
-
-
+ <%= "#{review.description}" %>
+ <br>
+<% if(review.user == current_user)%>
+  <%=link_to 'Delete', product_review_path(review.product, review), method: :delete %>
+<% end %>
+<br>
 </div>

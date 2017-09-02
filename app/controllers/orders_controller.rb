@@ -56,7 +56,7 @@ class OrdersController < ApplicationController
     if order.save
       UserMailer.payment_email(current_user, order).deliver_now
     else
-      # do some stuff
+      puts "order did not get saved! please try again"
     end
 
     order

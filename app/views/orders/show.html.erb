@@ -7,11 +7,7 @@
   <div class="order-summary jumbotron">
     <h4>Thank you for your order!</h4>
     <td>
-
-
     </td>
-
-
     <table class="table table-bordered">
       <thead>
         <tr>
@@ -23,8 +19,6 @@
         </tr>
       </thead>
       <tbody>
-
-
         <% @order.line_items.each do |line_item| %>
           <tr>
           <td colspan="2"><%= image_tag line_item.product.image.tiny %>
@@ -51,12 +45,7 @@
         </tr>
       </tfoot>
     </table>
-
   </div>
-
-
-
-
   <%= link_to "Continue Shopping", root_path, class: 'btn btn-lg btn-primary' %>
 
 </section>

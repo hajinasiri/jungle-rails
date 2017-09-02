@@ -38,9 +38,10 @@ aside {
   float: right;
   background-color: white;
 }
+
 /* forms */
 
-input, textarea, select, .uneditable-input {
+input, select, textarea, .uneditable-input {
   border: 1px solid #bbb;
   width: 100%;
   margin-bottom: 15px;
@@ -65,5 +66,3 @@ input {
     color: $state-danger-text;
   }
 }
-
-

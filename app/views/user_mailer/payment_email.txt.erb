@@ -1,0 +1,12 @@
+
+<% if @user.first_name %>
+  Thanks for your payment, <%= @user.first_name %>
+<% end %>
+You have successfully paid for your order
+<% @order.line_items.each do |item| %>
+  <%="Product name: #{item.product.name}" =%>
+  <%="Quantity: #{item.quantity}"=%>
+  <%="Item price: #{item.item_price}"=%>
+  <%="Total item price: #{item.total_price}"=%><br>
+<% end %>
+<%="Total: #{@order.total_cents/100}"=%>
