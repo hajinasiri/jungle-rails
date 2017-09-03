@@ -1,19 +1,22 @@
 # Jungle
 
 A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
+In this app user can sign-up, login, logout,put a review and delete the reviews that he has put before.
+Admin require to enter his username and password when clicking on the Admin dropdown.
+User can add or remove products to or from his cart.
+User can pay for his order and the app sends the user information about the ordered products and the total price and the email used for payment.
 
-
+# photos
+- !["First page of the app when the user is not logged in"](https://github.com/hajinasiri/jungle-rails/blob/master/docs/Screen%20Shot%202017-09-02%20at%205.27.17%20PM.png?raw=true)
+- !["Login page"](https://github.com/hajinasiri/jungle-rails/blob/master/docs/Screen%20Shot%202017-09-02%20at%205.27.57%20PM.png?raw=true)
+- !["Login page"]()
 ## Setup
 
 1. Fork & Clone
 2. Run `bundle install` to install dependencies
-3. Create `config/database.yml` by copying `config/database.example.yml`
-4. Create `config/secrets.yml` by copying `config/secrets.example.yml`
-5. Run `bin/rake db:reset` to create, load and seed db
-6. Create .env file based on .env.example
-7. Sign up for a Stripe account
-8. Put Stripe (test) keys into appropriate .env vars
-9. Run `bin/rails s -b 0.0.0.0` to start the server
+3. Run `bin/rake db:reset` to create, load and seed db
+4. Put Stripe (test) keys into appropriate .env vars
+5. Run `bin/rails s -b 0.0.0.0` to start the server
 
 ## Stripe Testing
 
