@@ -24,6 +24,17 @@
     <% if current_user %>
       <div class=newrating>
       <br>
+      <div class="total-rating">
+       Total Rate
+        <%  for i in 1..@product.reviews.average("rating").round %>
+          <span class=star>☆</span>
+        <% end %>
+        <% for i in @product.reviews.average("rating").round..4 %>
+          <span >☆</span>
+        <% end %>
+      </div>
+      <br>
+      <br>
       <h4>Rate this produtc!</h4>
       <%= form_for([@product, @review]) do |f| %>
         <br>
