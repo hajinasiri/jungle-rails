@@ -5,11 +5,16 @@ In this app user can sign-up, login, logout,put a review and delete the reviews 
 Admin require to enter his username and password when clicking on the Admin dropdown.
 User can add or remove products to or from his cart.
 User can pay for his order and the app sends the user information about the ordered products and the total price and the email used for payment.
+This project was done based on a template in lighthouse labs in 3 days.
 
 # photos
 - !["First page of the app when the user is not logged in"](https://github.com/hajinasiri/jungle-rails/blob/master/docs/Screen%20Shot%202017-09-02%20at%205.27.17%20PM.png?raw=true)
 - !["Login page"](https://github.com/hajinasiri/jungle-rails/blob/master/docs/Screen%20Shot%202017-09-02%20at%205.27.57%20PM.png?raw=true)
-- !["Login page"]()
+- !["Sing-up page"](https://github.com/hajinasiri/jungle-rails/blob/master/docs/Screen%20Shot%202017-09-02%20at%205.27.39%20PM.png?raw=true)
+- !["Review for each product"](https://github.com/hajinasiri/jungle-rails/blob/master/docs/Screen%20Shot%202017-09-02%20at%205.28.33%20PM.png?raw=true)
+- !["Cart content showing page"](https://github.com/hajinasiri/jungle-rails/blob/master/docs/Screen%20Shot%202017-09-02%20at%205.28.57%20PM.png?raw=true)
+- !["Order detail page"](https://github.com/hajinasiri/jungle-rails/blob/master/docs/Screen%20Shot%202017-09-02%20at%205.29.33%20PM.png?raw=true)
+
 ## Setup
 
 1. Fork & Clone
