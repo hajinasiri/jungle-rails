@@ -9,20 +9,30 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(user_params)
-    if @user.save
-      flash[:success] = "Welcome to jungle! You are one of us now!!"
-      redirect_to @user
-      log_in(@user)
-      # Handle a successful save.
+
+    if (User.where(email: user_params[:email])) == []
+      byebug
+      @user = User.new(user_params)
+      if @user.save
+        flash[:success] = "Welcome to jungle! You are one of us now!!"
+        log_in(@user)
+        redirect_to @user
+        # Handle a successful save.
+      else
+
+        render 'new'
+      end
     else
-      render 'new'
+      flash[:error] = "Error"
+      redirect_to "/users/new"
     end
   end
 
   private
 
     def user_params
-      params.require(:user).permit(:first_name, :last_name, :email, :password)
+      params.require(:user).permit(:first_name, :last_name, :email, :password , :password_confirmation)
     end
 end
+
+
