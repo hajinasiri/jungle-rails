@@ -48,7 +48,7 @@
             data-name="Jungle"
             data-description="Khurram Virani's Jungle Order"
             data-locale="auto"
-            data-email="kvirani@gmail.com"
+            data-email=<%= Rails.env.test? ? "#{Random.new.bytes(8).bytes.join[0,8]}@test.com" : "kvirani@gmail.com" %>
             data-currency="cad">
           </script>
 
